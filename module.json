@@ -1,0 +1,39 @@
+{
+  "id": "lancer-skill-trees",
+  "title": "LANCER Skill Trees",
+  "description": "Build skill trees for LANCER pilots, mechs and NPCs. Passive stat bonuses are applied automatically through the LANCER system's Active Effects, every tree has its own style (including a Borderlands-inspired cel-shaded theme with tier gating), and complex skills can be scripted as custom effects.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Jayty07",
+      "url": "https://github.com/Jayty07"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "lancer",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/skill-trees.css"
+  ],
+  "socket": true,
+  "url": "https://github.com/Jayty07/Lancer-Skill-Trees",
+  "manifest": "https://raw.githubusercontent.com/Jayty07/Lancer-Skill-Trees/main/module.json",
+  "download": "https://raw.githubusercontent.com/Jayty07/Lancer-Skill-Trees/main/module.zip",
+  "readme": "https://github.com/Jayty07/Lancer-Skill-Trees/blob/main/README.md",
+  "bugs": "https://github.com/Jayty07/Lancer-Skill-Trees/issues"
+}

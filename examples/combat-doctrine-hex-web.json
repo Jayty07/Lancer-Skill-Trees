@@ -1,0 +1,652 @@
+{
+  "id": "idlxxxxxxxxxxxxx",
+  "name": "Combat Doctrine (Hex Web)",
+  "description": "A sample radial tree. Each ring of a sector needs 2 more points spent in that sector's inner rings.",
+  "img": "modules/lancer-skill-trees/assets/tree.svg",
+  "access": "all",
+  "layout": "radial",
+  "radial": {
+    "sectors": 6,
+    "rings": 3,
+    "names": [
+      "Assault",
+      "Defense",
+      "Support",
+      "Systems",
+      "Utility",
+      "Mobility"
+    ]
+  },
+  "tierPoints": 2,
+  "cols": 7,
+  "rows": 6,
+  "sort": 0,
+  "style": {
+    "theme": "hexweb",
+    "accent": "#ff8a1f",
+    "secondary": "#1fb3c7",
+    "nodeShape": "circle",
+    "linkStyle": "straight",
+    "tierBar": true,
+    "banner": false,
+    "spacing": "normal",
+    "background": "",
+    "bgOpacity": 35
+  },
+  "nodes": {
+    "id1xxxxxxxxxxxxx": {
+      "id": "id1xxxxxxxxxxxxx",
+      "name": "Hardpoint Drills",
+      "img": "modules/lancer-skill-trees/assets/icons/targeting.svg",
+      "description": "+1 to ranged attack rolls.",
+      "x": 0,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idmxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.bonuses.flat.range_attack",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 0,
+        "r": 0.35
+      }
+    },
+    "id2xxxxxxxxxxxxx": {
+      "id": "id2xxxxxxxxxxxxx",
+      "name": "Heavy Hitter",
+      "img": "modules/lancer-skill-trees/assets/icons/impact.svg",
+      "description": "+1 to Ram checks.",
+      "x": 0,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id1xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idnxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.bonuses.flat.ram",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 0,
+        "r": 0.61
+      }
+    },
+    "id3xxxxxxxxxxxxx": {
+      "id": "id3xxxxxxxxxxxxx",
+      "name": "Missile Racks",
+      "img": "modules/lancer-skill-trees/assets/icons/missile.svg",
+      "description": "+1 use for Limited systems and weapons.",
+      "x": 0,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id2xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idoxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.loadout.limited_bonus",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 0,
+        "r": 0.87
+      }
+    },
+    "id4xxxxxxxxxxxxx": {
+      "id": "id4xxxxxxxxxxxxx",
+      "name": "Reinforced Plating",
+      "img": "modules/lancer-skill-trees/assets/icons/plating.svg",
+      "description": "+2 mech HP per rank.",
+      "x": 1,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 3,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idpxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.hp.max",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 60,
+        "r": 0.35
+      }
+    },
+    "id5xxxxxxxxxxxxx": {
+      "id": "id5xxxxxxxxxxxxx",
+      "name": "Bulwark",
+      "img": "modules/lancer-skill-trees/assets/icons/structure.svg",
+      "description": "+1 mech Armor.",
+      "x": 1,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id4xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idqxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.armor",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 60,
+        "r": 0.61
+      }
+    },
+    "id6xxxxxxxxxxxxx": {
+      "id": "id6xxxxxxxxxxxxx",
+      "name": "Overshield Emitters",
+      "img": "modules/lancer-skill-trees/assets/icons/overshield.svg",
+      "description": "+1 mech Structure.",
+      "x": 1,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id5xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idrxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.structure.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 60,
+        "r": 0.87
+      }
+    },
+    "id7xxxxxxxxxxxxx": {
+      "id": "id7xxxxxxxxxxxxx",
+      "name": "Field Medic",
+      "img": "modules/lancer-skill-trees/assets/icons/repair.svg",
+      "description": "+1 Repair Cap.",
+      "x": 2,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idsxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.repairs.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 120,
+        "r": 0.35
+      }
+    },
+    "id8xxxxxxxxxxxxx": {
+      "id": "id8xxxxxxxxxxxxx",
+      "name": "Drone Wing",
+      "img": "modules/lancer-skill-trees/assets/icons/drone.svg",
+      "description": "Drones gain +2 HP.",
+      "x": 2,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id7xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idtxxxxxxxxxxxxx",
+          "scope": "drone",
+          "key": "system.hp_bonus",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 120,
+        "r": 0.61
+      }
+    },
+    "id9xxxxxxxxxxxxx": {
+      "id": "id9xxxxxxxxxxxxx",
+      "name": "Turret Tuning",
+      "img": "modules/lancer-skill-trees/assets/icons/turret.svg",
+      "description": "Deployables gain +3 HP.",
+      "x": 2,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id8xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "iduxxxxxxxxxxxxx",
+          "scope": "deployable",
+          "key": "system.hp_bonus",
+          "mode": 2,
+          "value": "3",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 120,
+        "r": 0.87
+      }
+    },
+    "idaxxxxxxxxxxxxx": {
+      "id": "idaxxxxxxxxxxxxx",
+      "name": "Firewall",
+      "img": "modules/lancer-skill-trees/assets/icons/firewall.svg",
+      "description": "+1 mech E-Defense.",
+      "x": 3,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idvxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.edef",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 180,
+        "r": 0.35
+      }
+    },
+    "idbxxxxxxxxxxxxx": {
+      "id": "idbxxxxxxxxxxxxx",
+      "name": "Tech Specialist",
+      "img": "modules/lancer-skill-trees/assets/icons/hacking.svg",
+      "description": "+1 Tech Attack.",
+      "x": 3,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "idaxxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idwxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.tech_attack",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 180,
+        "r": 0.61
+      }
+    },
+    "idcxxxxxxxxxxxxx": {
+      "id": "idcxxxxxxxxxxxxx",
+      "name": "NHP Link",
+      "img": "modules/lancer-skill-trees/assets/icons/nhp.svg",
+      "description": "+1 AI cap.",
+      "x": 3,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "idbxxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idxxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.ai.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 180,
+        "r": 0.87
+      }
+    },
+    "iddxxxxxxxxxxxxx": {
+      "id": "iddxxxxxxxxxxxxx",
+      "name": "Coolant Loops",
+      "img": "modules/lancer-skill-trees/assets/icons/coolant.svg",
+      "description": "+1 Heat Cap.",
+      "x": 4,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idyxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.heat.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 240,
+        "r": 0.35
+      }
+    },
+    "idexxxxxxxxxxxxx": {
+      "id": "idexxxxxxxxxxxxx",
+      "name": "Reactor Tuning",
+      "img": "modules/lancer-skill-trees/assets/icons/reactor.svg",
+      "description": "+1 System Point.",
+      "x": 4,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "iddxxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idzxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.loadout.sp.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 240,
+        "r": 0.61
+      }
+    },
+    "idfxxxxxxxxxxxxx": {
+      "id": "idfxxxxxxxxxxxxx",
+      "name": "Coolant Flush",
+      "img": "modules/lancer-skill-trees/assets/icons/heat.svg",
+      "description": "Scripted: clears 1 Heat per rank at the start of your turns.",
+      "x": 4,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 2,
+      "minLevel": 0,
+      "requires": [
+        "idexxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [],
+      "custom": [
+        {
+          "id": "id10xxxxxxxxxxxx",
+          "skill": "coolant-flush",
+          "options": {
+            "heat": 1
+          }
+        }
+      ],
+      "macro": "",
+      "pos": {
+        "a": 240,
+        "r": 0.87
+      }
+    },
+    "idgxxxxxxxxxxxxx": {
+      "id": "idgxxxxxxxxxxxxx",
+      "name": "Servo Tuning",
+      "img": "modules/lancer-skill-trees/assets/icons/speed.svg",
+      "description": "+1 mech Speed.",
+      "x": 5,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "id11xxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.speed",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 300,
+        "r": 0.35
+      }
+    },
+    "idhxxxxxxxxxxxxx": {
+      "id": "idhxxxxxxxxxxxxx",
+      "name": "Evasive Maneuvers",
+      "img": "modules/lancer-skill-trees/assets/icons/evasion.svg",
+      "description": "+1 mech Evasion.",
+      "x": 5,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "idgxxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "id12xxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.evasion",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 300,
+        "r": 0.61
+      }
+    },
+    "idixxxxxxxxxxxxx": {
+      "id": "idixxxxxxxxxxxxx",
+      "name": "Sensor Mast",
+      "img": "modules/lancer-skill-trees/assets/icons/sensors.svg",
+      "description": "+2 mech Sensors.",
+      "x": 5,
+      "y": 2,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "idhxxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "id13xxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.sensor_range",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 300,
+        "r": 0.87
+      }
+    },
+    "idjxxxxxxxxxxxxx": {
+      "id": "idjxxxxxxxxxxxxx",
+      "name": "Pilot Conditioning",
+      "img": "modules/lancer-skill-trees/assets/icons/pilot.svg",
+      "description": "+2 pilot HP.",
+      "x": 1,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "id14xxxxxxxxxxxx",
+          "scope": "pilot",
+          "key": "system.hp.max",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 82,
+        "r": 0.437
+      }
+    },
+    "idkxxxxxxxxxxxxx": {
+      "id": "idkxxxxxxxxxxxxx",
+      "name": "Living Legend",
+      "img": "modules/lancer-skill-trees/assets/icons/capstone.svg",
+      "description": "Requires Missile Racks or Sensor Mast. +1 mech Structure and +1 Evasion.",
+      "x": 0,
+      "y": 2,
+      "cost": 3,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id3xxxxxxxxxxxxx",
+        "idixxxxxxxxxxxxx"
+      ],
+      "requireMode": "any",
+      "modifiers": [
+        {
+          "id": "id15xxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.structure.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "id": "id16xxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.evasion",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": {
+        "a": 331,
+        "r": 0.957
+      }
+    }
+  }
+}

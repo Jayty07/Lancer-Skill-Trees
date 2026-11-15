@@ -1,0 +1,288 @@
+{
+  "id": "id9xxxxxxxxxxxxx",
+  "name": "Frame Veteran (Example)",
+  "description": "A sample tree. Each row needs 2 more points spent in the rows above it. Edit or delete it freely.",
+  "img": "modules/lancer-skill-trees/assets/tree.svg",
+  "access": "all",
+  "layout": "grid",
+  "radial": {
+    "sectors": 6,
+    "rings": 3,
+    "names": [
+      "Assault",
+      "Defense",
+      "Support",
+      "Systems",
+      "Utility",
+      "Mobility"
+    ]
+  },
+  "tierPoints": 2,
+  "cols": 3,
+  "rows": 4,
+  "sort": 0,
+  "style": {
+    "theme": "cel",
+    "accent": "#f6b51e",
+    "secondary": "#2b9be8",
+    "nodeShape": "rounded",
+    "linkStyle": "elbow",
+    "tierBar": true,
+    "banner": true,
+    "spacing": "roomy",
+    "background": "",
+    "bgOpacity": 35
+  },
+  "nodes": {
+    "id1xxxxxxxxxxxxx": {
+      "id": "id1xxxxxxxxxxxxx",
+      "name": "Reinforced Plating",
+      "img": "modules/lancer-skill-trees/assets/icons/plating.svg",
+      "description": "Extra armor plating bolted onto every frame you pilot.\n\n+2 mech HP per rank.",
+      "x": 0,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 3,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idaxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.hp.max",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id2xxxxxxxxxxxxx": {
+      "id": "id2xxxxxxxxxxxxx",
+      "name": "Pilot Conditioning",
+      "img": "modules/lancer-skill-trees/assets/icons/pilot.svg",
+      "description": "Hard training keeps you alive outside the cockpit.\n\n+2 pilot HP and +1 pilot Evasion.",
+      "x": 2,
+      "y": 0,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idbxxxxxxxxxxxxx",
+          "scope": "pilot",
+          "key": "system.hp.max",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "id": "idcxxxxxxxxxxxxx",
+          "scope": "pilot",
+          "key": "system.evasion",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id3xxxxxxxxxxxxx": {
+      "id": "id3xxxxxxxxxxxxx",
+      "name": "Evasive Maneuvers",
+      "img": "modules/lancer-skill-trees/assets/icons/evasion.svg",
+      "description": "+1 mech Evasion.",
+      "x": 0,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id1xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "iddxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.evasion",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id4xxxxxxxxxxxxx": {
+      "id": "id4xxxxxxxxxxxxx",
+      "name": "Hardened Systems",
+      "img": "modules/lancer-skill-trees/assets/icons/firewall.svg",
+      "description": "No prerequisite skill, only the tier requirement.\n\n+1 mech E-Defense and +1 Heat Cap.",
+      "x": 1,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idexxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.edef",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "id": "idfxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.heat.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id5xxxxxxxxxxxxx": {
+      "id": "id5xxxxxxxxxxxxx",
+      "name": "Drone Tuning",
+      "img": "modules/lancer-skill-trees/assets/icons/drone.svg",
+      "description": "Your drones gain +2 HP and +1 Evasion per rank.",
+      "x": 2,
+      "y": 1,
+      "cost": 1,
+      "maxRank": 2,
+      "minLevel": 0,
+      "requires": [
+        "id2xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idgxxxxxxxxxxxxx",
+          "scope": "drone",
+          "key": "system.hp_bonus",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "id": "idhxxxxxxxxxxxxx",
+          "scope": "drone",
+          "key": "system.evasion",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id6xxxxxxxxxxxxx": {
+      "id": "id6xxxxxxxxxxxxx",
+      "name": "Ace",
+      "img": "modules/lancer-skill-trees/assets/icons/speed.svg",
+      "description": "Requires License Level 3.\n\n+1 mech Speed, plus 1 more for every 6 License Levels (formula: 1 + floor(@ll/6)).",
+      "x": 0,
+      "y": 2,
+      "cost": 1,
+      "maxRank": 1,
+      "minLevel": 3,
+      "requires": [
+        "id3xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [
+        {
+          "id": "idixxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.speed",
+          "mode": 2,
+          "value": "1 + floor(@ll/6)",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    },
+    "id7xxxxxxxxxxxxx": {
+      "id": "id7xxxxxxxxxxxxx",
+      "name": "Coolant Flush",
+      "img": "modules/lancer-skill-trees/assets/icons/coolant.svg",
+      "description": "Scripted custom effect: at the start of each of your turns, your mech clears 1 Heat per rank.",
+      "x": 1,
+      "y": 2,
+      "cost": 1,
+      "maxRank": 2,
+      "minLevel": 0,
+      "requires": [
+        "id4xxxxxxxxxxxxx"
+      ],
+      "requireMode": "all",
+      "modifiers": [],
+      "custom": [
+        {
+          "id": "idjxxxxxxxxxxxxx",
+          "skill": "coolant-flush",
+          "options": {
+            "heat": 1
+          }
+        }
+      ],
+      "macro": "",
+      "pos": null
+    },
+    "id8xxxxxxxxxxxxx": {
+      "id": "id8xxxxxxxxxxxxx",
+      "name": "Living Legend",
+      "img": "modules/lancer-skill-trees/assets/icons/capstone.svg",
+      "description": "Capstone. Requires Ace or Coolant Flush.\n\n+1 mech Structure and +2 Repair Cap.",
+      "x": 1,
+      "y": 3,
+      "cost": 2,
+      "maxRank": 1,
+      "minLevel": 0,
+      "requires": [
+        "id6xxxxxxxxxxxxx",
+        "id7xxxxxxxxxxxxx"
+      ],
+      "requireMode": "any",
+      "modifiers": [
+        {
+          "id": "idkxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.structure.max",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "id": "idlxxxxxxxxxxxxx",
+          "scope": "mech",
+          "key": "system.repairs.max",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "custom": [],
+      "macro": "",
+      "pos": null
+    }
+  }
+}
