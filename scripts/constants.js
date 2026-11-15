@@ -43,11 +43,31 @@ export const MODE_ORDER = [2, 1, 5, 4, 3, 0, 11, 12];
  */
 export const SCOPES = {
   pilot: { label: "Pilot", short: "Pilot", targetType: "pilot" },
-  mech: { label: "Mech / NPC", short: "Mech", targetType: "mech_and_npc" },
+  mech: { label: "Mech / NPC", short: "Mech", targetType: "mech" },
   deployable: { label: "Deployables", short: "Deployable", targetType: "only_deployable" },
   drone: { label: "Drones", short: "Drone", targetType: "only_drone" },
   allDeployables: { label: "Deployables & Drones", short: "Deployable/Drone", targetType: "deployable" }
 };
+
+/**
+ * The LANCER target_type for a scope on a given actor. Uses only the basic targets that every
+ * LANCER release since 2.1 understands ("pilot", "mech", "npc", "deployable"), so it works on
+ * Foundry v12 (LANCER 2.x) and v13 (LANCER 3.x). The deployable-only / drone-only targets are
+ * used on LANCER 3+, and fall back to all deployables and drones on older releases.
+ */
+export function targetTypeFor(scope, actorType, legacy = false) {
+  if (scope === "mech") return actorType === "npc" ? "npc" : "mech";
+  if (legacy && (scope === "deployable" || scope === "drone")) return "deployable";
+  return SCOPES[scope]?.targetType ?? "mech";
+}
+
+/** True on LANCER releases before 3.0 (the Foundry v12 line). */
+export function isLegacyLancer() {
+  const version = globalThis.game?.system?.version;
+  if (!version || globalThis.game?.system?.id !== "lancer") return false;
+  const newer = globalThis.foundry?.utils?.isNewerVersion;
+  return newer ? newer("3.0.0", version) : Number.parseInt(version, 10) < 3;
+}
 
 export const CUSTOM_KEY = "__custom__";
 

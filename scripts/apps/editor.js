@@ -1,6 +1,6 @@
 import {
   CELL_SIZE, SCOPES, STATS, CUSTOM_KEY, MODE_INFO, MODE_ORDER, AE_MODES,
-  DEFAULT_NODE_IMG, DEFAULT_TREE_IMG, THEMES, NODE_SHAPES, LINK_STYLES, ROW_SPACING, ICONS, suggestIcon, THEME_HEXWEB
+  DEFAULT_NODE_IMG, DEFAULT_TREE_IMG, THEMES, NODE_SHAPES, LINK_STYLES, ROW_SPACING, ICONS, suggestIcon, THEME_HEXWEB, isLegacyLancer
 } from "../constants.js";
 import {
   getTrees, saveTrees, normalizeTree, normalizeNode, normalizeModifier, normalizeCustom,
@@ -284,6 +284,7 @@ export class SkillTreeEditor extends ApplicationV2 {
       <div class="lst-section">
         <h3><i class="fa-solid fa-chart-simple"></i> Passive modifiers</h3>
         <p class="lst-hint">Applied as Active Effects. Mech, deployable and drone bonuses on a pilot are passed to their active mech and deployables by the LANCER system. Add values stack per rank; formulas can use @ll, @grit, @hull, @agi, @sys, @eng, @tier and @rank.</p>
+        ${isLegacyLancer() ? '<p class="lst-hint lst-warn">LANCER 2.x: “Deployables” and “Drones” bonuses both apply to all deployables and drones.</p>' : ""}
         ${node.modifiers.map((m, i) => this._modifierRow(m, i)).join("")}
         <button type="button" class="lst-btn small" data-action="lstAddModifier"><i class="fa-solid fa-plus"></i> Add modifier</button>
       </div>

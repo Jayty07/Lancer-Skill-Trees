@@ -1,8 +1,8 @@
 {
   "id": "lancer-skill-trees",
   "title": "LANCER Skill Trees",
-  "description": "Build skill trees for LANCER pilots, mechs and NPCs. Passive stat bonuses are applied automatically through the LANCER system's Active Effects, every tree has its own style (including a Borderlands-inspired cel-shaded theme with tier gating), and complex skills can be scripted as custom effects.",
-  "version": "1.0.0",
+  "description": "Build skill trees (Foundry v12 and v13) for LANCER pilots, mechs and NPCs. Passive stat bonuses are applied automatically through the LANCER system's Active Effects, every tree has its own style (including a Borderlands-inspired cel-shaded theme with tier gating), and complex skills can be scripted as custom effects.",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Jayty07",
@@ -10,7 +10,7 @@
     }
   ],
   "compatibility": {
-    "minimum": "13",
+    "minimum": "12",
     "verified": "13"
   },
   "relationships": {
@@ -19,7 +19,7 @@
         "id": "lancer",
         "type": "system",
         "compatibility": {
-          "minimum": "3.0.0"
+          "minimum": "2.8.0"
         }
       }
     ]

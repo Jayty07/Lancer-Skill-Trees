@@ -1,4 +1,4 @@
-import { MODULE_ID, SCOPES, MODE_INFO, AE_MODES } from "./constants.js";
+import { MODULE_ID, SCOPES, MODE_INFO, AE_MODES, targetTypeFor, isLegacyLancer } from "./constants.js";
 import { getTrees, getRanks, formulaVars, hasProgress } from "./data.js";
 import { getCustomSkill, skillContext } from "./registry.js";
 import { onSocket, emit } from "./socket.js";
@@ -83,7 +83,7 @@ function effectName(node, rank, scope) {
  * Build the Active Effects an actor should carry: one per unlocked node per scope.
  * Returns Map<key, effectData>, key = "treeId.nodeId.scope".
  */
-export function buildDesiredEffects(actor, { trees = getTrees(), systemId = globalThis.game?.system?.id ?? "lancer" } = {}) {
+export function buildDesiredEffects(actor, { trees = getTrees(), systemId = globalThis.game?.system?.id ?? "lancer", legacy = isLegacyLancer() } = {}) {
   const desired = new Map();
   const vars = formulaVars(actor);
   for (const [treeId, nodeRanks] of Object.entries(getRanks(actor))) {
@@ -144,7 +144,7 @@ export function buildDesiredEffects(actor, { trees = getTrees(), systemId = glob
           changes,
           flags: {
             [MODULE_ID]: { key, treeId, nodeId, scope, rank, treeName: tree.name },
-            [systemId]: { target_type: SCOPES[scope].targetType }
+            [systemId]: { target_type: targetTypeFor(scope, actor.type, legacy) }
           }
         });
       }
