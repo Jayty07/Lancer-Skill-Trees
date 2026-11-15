@@ -1,0 +1,18 @@
+{
+  "id": "lancer-barbrawl-hud",
+  "title": "LANCER HUD for Bar Brawl",
+  "description": "A stylized token HUD for LANCER built on Bar Brawl: an HP gauge with Structure and Stress pips that match each mech's maximums. Includes a clean colored-bar style.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Jayty07", "url": "https://github.com/Jayty07" }],
+  "compatibility": { "minimum": "12", "verified": "13" },
+  "relationships": {
+    "systems": [{ "id": "lancer", "type": "system" }],
+    "requires": [{ "id": "barbrawl", "type": "module" }]
+  },
+  "esmodules": ["scripts/main.js"],
+  "url": "https://github.com/Jayty07/Lancer-Skill-Trees/tree/main/bar-brawl-hud",
+  "manifest": "https://raw.githubusercontent.com/Jayty07/Lancer-Skill-Trees/main/bar-brawl-hud/module.json",
+  "download": "https://raw.githubusercontent.com/Jayty07/Lancer-Skill-Trees/main/bar-brawl-hud/module.zip",
+  "readme": "https://github.com/Jayty07/Lancer-Skill-Trees/blob/main/bar-brawl-hud/README.md",
+  "bugs": "https://github.com/Jayty07/Lancer-Skill-Trees/issues"
+}

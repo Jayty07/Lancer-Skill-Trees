@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="40" viewBox="0 0 400 40"><defs>
+<linearGradient id="hpfill" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#b6ffd6"/><stop offset="0.18" stop-color="#4dff9a"/>
+  <stop offset="0.6" stop-color="#18c76a"/><stop offset="1" stop-color="#0a7d43"/>
+</linearGradient>
+<linearGradient id="hpback" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1b232d"/><stop offset="1" stop-color="#0a0e13"/>
+</linearGradient></defs><polygon points="12,5 395,5 395,28 388,35 5,35 5,12" fill="url(#hpfill)"/><rect x="12" y="8" width="376" height="4" rx="2" fill="#ffffff" fill-opacity="0.45"/><line x1="40" y1="9" x2="40" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="80" y1="9" x2="80" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="120" y1="9" x2="120" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="160" y1="9" x2="160" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="200" y1="9" x2="200" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="240" y1="9" x2="240" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="280" y1="9" x2="280" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="320" y1="9" x2="320" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/><line x1="360" y1="9" x2="360" y2="31" stroke="#000" stroke-opacity="0.35" stroke-width="2"/></svg>

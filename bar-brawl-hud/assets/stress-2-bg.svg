@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><defs>
+<linearGradient id="stressfill" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffe1c2"/><stop offset="0.2" stop-color="#ffa34d"/>
+  <stop offset="0.65" stop-color="#f06d12"/><stop offset="1" stop-color="#8c3a06"/>
+</linearGradient>
+<linearGradient id="slot" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1b232d"/><stop offset="1" stop-color="#0a0e13"/>
+</linearGradient></defs><polygon points="11.0,3 97.0,3 89.0,37 3.0,37" fill="#000"/><polygon points="111.0,3 197.0,3 189.0,37 103.0,37" fill="#000"/><polygon points="11.0,6 94.0,6 89.0,34 6.0,34" fill="url(#slot)" stroke="#2c3644" stroke-width="1.5"/><polygon points="111.0,6 194.0,6 189.0,34 106.0,34" fill="url(#slot)" stroke="#2c3644" stroke-width="1.5"/></svg>

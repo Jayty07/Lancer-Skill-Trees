@@ -9,6 +9,8 @@ A Foundry VTT module for the [LANCER system](https://foundryvtt.com/packages/lan
 - **Two layouts**: *Grid* (rows and columns, with Borderlands-style tier gating) and *Radial web* (a hexagon of sectors and rings with a glowing core).
 - **Hover cards** on every skill: icon, rank, cost, status (including exactly why it is locked), effects and a short description, styled to match the tree.
 
+Also in this repository: **[LANCER HUD for Bar Brawl](bar-brawl-hud/README.md)**, a separate module with a stylized HP / Structure / Stress token HUD. Manifest: `https://raw.githubusercontent.com/Jayty07/Lancer-Skill-Trees/main/bar-brawl-hud/module.json`
+
 Works on **Foundry VTT v12** (LANCER 2.8 or later, e.g. 2.12) and **Foundry VTT v13** (LANCER 3.x). On LANCER 2.x, “Deployables” and “Drones” bonuses both apply to all deployables and drones; everything else behaves the same.
 
 ---
